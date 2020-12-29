@@ -1,0 +1,65 @@
+//F2
+using System;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+
+namespace DZ
+{
+public class composer
+{
+public string name { get; set; }
+public string Surname { get; set; }
+}
+public class alubm
+{
+public string Title { get; set; }
+public string date { get; set; }
+}
+public class song
+{
+public string Name { get; set; }
+public date date { get; set; }
+public string genre { get; set; }
+
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+       composer = new composer
+        {
+            name = "Adam Levin",
+
+        };
+        song  = new song
+        {
+            Title = "Misery",
+            composer = "Adam Levin",
+            genre = "Rock/pop"
+         
+        };
+        song = new song
+        {
+            Title = "What lovers do",
+            composer  ="Adam Levin" ,
+            genre = "Rock/pop",
+
+        };
+        album angel = new album
+        {
+           Title = "angel",
+            date = "11/11/2011"
+        };
+        album dark = new album
+        {
+           Title = "dark",
+            date = "11/11/2011"
+        };
+
+
+        string json = JsonSerializer.Serialize<album>(dark);
+        Console.WriteLine(json);
+        Console.ReadKey();
+    }
+}
+}
