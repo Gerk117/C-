@@ -1,4 +1,3 @@
-//F2
 using System;
 using System.Collections.Generic;
 using System.Linq; 
@@ -14,7 +13,7 @@ public class composer
 public string name { get; set; }
 public string Surname { get; set; }
 }
-public class alubm
+public class album
 {
 public string Title { get; set; }
 public string date { get; set; }
@@ -24,6 +23,7 @@ public class song
 public string Name { get; set; }
 public string date { get; set; }
 public string genre { get; set; }
+public string composer{get; set; }
 
 }
 class Program
@@ -35,21 +35,21 @@ class Program
             name = "Adam Levin",
 
         };
-        song  = new song
+        song Misery  = new song
         {
-            Title = "Misery",
+            Name = "Misery",
             composer = "Adam Levin",
             genre = "Rock/pop"
          
         };
-        song = new song
+        song what = new song
         {
-            Title = "What lovers do",
+            Name = "What",
             composer  ="Adam Levin" ,
             genre = "Rock/pop",
 
         };
-        album angel = new album
+       album angel = new album
         {
            Title = "angel",
             date = "11/11/2011"
